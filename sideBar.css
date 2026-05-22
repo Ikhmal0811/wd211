@@ -1,0 +1,84 @@
+.sideNav{ 
+   height: 100%;
+   width: 180px; 
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #0f172a;
+   overflow-x: hidden;
+   padding-top: 20px;
+}
+
+
+.sideNav a{
+    padding: 50px 8px 6px 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+
+
+.dashIcon{
+  width: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.dashLink{
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+
+@media (max-width: 760px) {
+   
+    .sideNav {
+      border-radius: 5px;
+        position: relative;    
+        width: 100%;           
+        height: auto;          
+        display: flex;         
+        flex-direction: row;   
+        
+        justify-content: space-around; 
+        align-items: center;   
+        padding: 10px 0; 
+        box-sizing: border-box;      
+    }
+
+    .sideNav > h1{
+      display: none;
+    }
+
+    
+    .sideNav h1 {
+        margin: 0;
+    }
+
+    
+    .sideNav a {
+        padding: 10px 15px !important; 
+        font-size: 16px;              
+    }
+
+    
+    .dashIcon {
+        display: none;
+    }
+
+    
+    .dashLink {
+        gap: 0; /* Removes the 18px gap that was holding space for the icon */
+    }
+
+    
+    .container {
+        margin-left: 0 !important;
+        margin-top: 20px;         
+        flex-direction: column;    
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard page</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+      
+
+    <!-- sidebar -->
+    <div id="sideNav"></div>
+
+    <!-- Page content -->
+     <div class="main">
+        <h1>System Overview</h1>
+        <p>Welcome back. Here's what's happening across your institution today.</p>
+
+        <div class="dashboard-container">
+            <div class="card"> 
+                <div class="card-header">
+                    <span class="label">TOTAL STUDENT</span> 
+                    <h2 class="value">12,500</h2>
+                </div>
+                <div class="card-footer">
+                    <img src="icon/trending.png" alt="">
+                    <span class="highlight">+4.2%</span><span> vs last semester</span>
+                </div>
+            
+
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="label">ACTIVE INTAKES</span>
+                    <h2 class="value">24</h2>
+                </div>
+                <div class="card-footer">
+                    <img src="icon/refresh-page-option.png" alt="">
+                    <span class="highlight2"> 6 Closing</span><span> withing 48 hours</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="label">PENDING RESULTS</span>
+                    <h2 class="value">24</h2>
+                </div>
+                <div class="card-footer">
+                    <img src="icon/exclamation.png" alt="">
+                    <span class="highlight3"> 2 overdue</span><span> requires attention</span>
+                </div>
+            </div>
+
+        </div>
+     </div>
+
+
+
+
+
+
+     <script>
+        fetch('sideBar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sideNav').innerHTML = data;
+            });
+     </script>
+</body>
+</html>
