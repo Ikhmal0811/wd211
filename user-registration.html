@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div id="sideNav"></div>
+
+    <div class="container">
+
+        <div class="registration-form">
+            <form action="">
+                <h3>User Registration</h3><br>
+                <span>Complete all fields to create a new system user account</span>
+                <hr><br>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label for="user-first-name">First Name</label>
+                        <input type="text" id="user-first-name" placeholder="Enter first name">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="user-last-name">Last Name</label>
+                        <input type="text" id="user-last-name" placeholder="Enter last name">
+                    </div>
+
+                </div>
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label for="user-role">Role</label>
+                        <select name="role" id="user-role">
+                            <option disabled selected value="">Choose Role</option>
+                            <option value="admin">Administrator</option>
+                            <option value="staff">Staff</option>
+                            <option value="faculty">Faculty</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="user-dept">Department</label>
+                        <select name="dept" id="user-dept">
+                            <option disabled selected value="">Choose Department</option>
+                            <option value="it">IT Support</option>
+                            <option value="academic">Academic Affairs</option>
+                            <option value="finance">Finance</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label for="user-password">Password</label>
+                        <input type="password" >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="user-email">Email</label>
+                        <input type="email" id="user-email" placeholder="user@example.com">
+                    </div>
+
+                </div>
+
+                <div class="form-btn">
+                    <button class="btn-res" type="reset">Reset</button>
+                    <button class="btn-sub" type="submit">Create User</button>
+                </div>
+
+            </form>
+
+            <div class="navigation-buttons">
+                <a href="registration.html" class="btn-nav">Go to Student Registration</a>
+            </div>
+        </div>
+
+        <div class="registered-std">
+
+            <div class="reg-header">
+                <h3>System Users</h3>
+                <input type="text" placeholder="Search by name or role">
+            </div>
+            <hr>
+
+            <div class="student-row">
+                <div class="left-side">
+                    <img src="studentPic/corpWoman.jpg" alt="User Avatar">
+                    <div class="student-info">
+                        <h3>Sarah Connor</h3>
+                        <p class="major">System Administrator</p>
+                        <p class="status">Active</p>
+                    </div>                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        fetch('sideBar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sideNav').innerHTML = data;
+            });
+     </script>
+</body>
+</html>
