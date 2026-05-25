@@ -75,7 +75,7 @@
 
     
     .dashLink {
-        gap: 0; /* Removes the 18px gap that was holding space for the icon */
+        gap: 0; 
     }
 
     

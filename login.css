@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f8fafc; /* Consistent with result.css */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+}
+
+.login-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Consistent with result.css */
+    padding: 40px;
+    width: 100%;
+    max-width: 400px; /* Max width for the form */
+    text-align: center;
+    border: 1px solid #e2e8f0; /* Consistent with result.css */
+}
+
+.login-form h2 {
+    font-size: 28px;
+    color: #0f172a; /* Consistent with result.css */
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    color: #64748b; /* Consistent with result.css */
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155; /* Consistent with result.css */
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.2s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus {
+    outline: none;
+    border-color: #3b82f6; /* Focus color */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #0f172a; /* Dark blue, similar to sidebar background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #1e293b; /* Slightly lighter on hover */
+}
+
+.forgot-password {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #3b82f6; /* Blue link color */
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .login-container {
+        margin: 20px;
+        padding: 30px;
+    }
+
+    .login-form h2 {
+        font-size: 24px;
+    }
+
+    .login-form p {
+        font-size: 14px;
+    }
+}
