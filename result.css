@@ -7,6 +7,10 @@ body {
 .main {
     margin-left: 180px; /* Aligned with sidebar width */
     padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .header {
@@ -28,7 +32,7 @@ body {
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow-x: auto; 
     border: 1px solid #e2e8f0;
 }
 
@@ -87,6 +91,10 @@ body {
     padding: 4px 12px;
     border-radius: 20px;
     font-weight: 600;
+}
+
+.main .footer {
+    margin-top: auto;
 }
 
 @media (max-width: 760px) {
